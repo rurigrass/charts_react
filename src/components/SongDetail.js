@@ -5,17 +5,15 @@ import React from 'react';
 
     function cutLink (link) {
       let cutted = link.slice(14)
-      console.log(cutted);
       let newLink = "https://embed.music" + cutted
-      console.log(newLink);
       return newLink
     }
 
     return (
-      <div className="songDiv" class="songCss" >
-        <h4>{props.children["im:artist"].label}</h4>
-        <p>{props.children["im:name"].label}</p>
-         <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src={cutLink(props.children.id.label)} width="660"></iframe>
+      <div className="songDiv" className="songCss">
+        <hr></hr>
+        <h4><span className="position">{props.position}</span> {props.children["im:artist"].label} - <span className="songName">{props.children["im:name"].label}</span></h4>
+         <iframe allow="autoplay *; encrypted-media *;" frameBorder="0" height="150" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src={cutLink(props.children.id.label)} width="660"></iframe>
       </div>
     )
   }

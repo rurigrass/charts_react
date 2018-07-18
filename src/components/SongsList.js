@@ -6,7 +6,7 @@ class SongsList extends React.Component {
   render(){
 
     const songDetailComponents = this.props.data.map((song, index) => {
-      return <SongDetail key={index}>{song}</SongDetail>
+      return <SongDetail position={index + 1} key={index}>{song}</SongDetail>
     })
 
     return(

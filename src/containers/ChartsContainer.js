@@ -22,7 +22,7 @@ class ChartsContainer extends React.Component {
   render(){
     return (
       <div>
-        <h1>Charts Container</h1>
+        <h1>Top 20</h1>
         <SongsList data={this.state.songs} />
 
 
